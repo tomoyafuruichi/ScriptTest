@@ -11,9 +11,13 @@ public class Boss
     //魔法攻撃
    public void Magic()
     {
+        
+
         //MPが足りるか確認
-        if (mp >= 5)
+        if (mp >=5)
         {
+            //MPを5減少
+            mp -= 5;
             //発動、のこりMP表示
             Debug.Log("魔法攻撃をした。のこりMPは" + mp+"。");
         }
@@ -23,8 +27,7 @@ public class Boss
             Debug.Log("MPが足りないため魔法が使えない。");
         }
 
-        //MPを5減少
-        mp -= 5;
+        
     }
 }
 public class Test : MonoBehaviour {
@@ -35,13 +38,13 @@ public class Test : MonoBehaviour {
         int[] array = { 3, 7, 4, 5, 8 };
 
         //順番に表示
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < array.Length; i++)
         {
             Debug.Log(array[i]);
         }
 
         //逆順に表示
-        for(int i = 4; i >= 0; i--)
+        for(int i = array.Length-1; i >=0 ; i--)
         {
             Debug.Log(array[i]);
         }
